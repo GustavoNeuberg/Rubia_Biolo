@@ -1,0 +1,348 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --rosa:#BF6576;
+    --cinza: #D9D9D9;
+    --preto: #0D0D0D;
+    --pastel: #BFA595;
+
+    --destaque: "Anuphan", sans-serif;
+    --padrao: "Lato", serif; 
+}
+
+/*---NAVBAR ---*/
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px; 
+}
+
+nav img {
+    height: normal; 
+    image-rendering: optimizeQuality;
+}
+
+nav ul {
+    display: flex; 
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    margin-left: 20px; /* Espaço entre os links */
+    transition: color 0.3s;
+}
+
+nav ul a:hover {
+    color: lightgray; }
+/* ----*/
+header {
+    height: 45dvh;
+    background-image: url(img/img1.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+header h1 {
+    display: block;
+    justify-content:left;
+    padding-left: 40px;
+    color: white;
+    font-family: var(--destaque);
+    font-size: 3.5em;
+}
+strong {
+    color: #BF6576 ;
+}
+header p {
+    display: flex;
+    color: var(--cinza);
+    font-family: var(--destaque);   
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 15px;
+    
+}
+
+/*---SOBRE RÚBIA---*/
+
+#sobre {
+    max-width: 1000px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin: auto;
+    padding: 20px; 
+    background-color: #f9f9f9;
+}
+
+#sobre img {
+    max-width: 40%; 
+    height: 40; 
+    border-radius: 10px; 
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); 
+}
+
+#sobre .content { 
+    display: flex; 
+    flex-direction: column; 
+    max-width: 50%; 
+}
+
+#sobre p {
+    font-family: var(--padrao);
+    font-weight: 500;
+    font-size: 1.2em;
+    color: black; 
+    line-height: 1.5; 
+    margin: auto; 
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    border: 3px solid rgb(252, 70, 100);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: var(--destaque);
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 70, 100);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+.btn:hover::before {
+    transform: translateX(0);
+}
+
+/*---ATENDIMENTOS---*/
+
+#txt {
+    color: var(--rosa);
+    font-family: var(--destaque);
+    text-align: center;
+    font-weight: 1.5em;
+    font-size: bold;
+    padding: 25px;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    gap: 15px; 
+    max-width: 1000px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+    overflow: hidden;
+    padding: 10px; 
+    max-width: 300px;  */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card-img {
+    width: 100%; 
+    height: 200px;  
+    object-fit: cover; 
+    border-radius: 6px; 
+    margin-bottom: 10px;  
+}
+
+.card-body {
+    padding: 10px; 
+    text-align: center;
+}
+
+.card-title {
+    font-family: var(--padrao);
+    font-size: 1.4em; 
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+.card-text {
+    font-family: var(--padrao);
+    font-size: 0.95em; 
+    line-height: 1.4; 
+    color: black;
+}
+
+.card:hover {
+    box-shadow: 0 0 12px 4px #FF69B4, 0 0 25px 8px #FF69B4;
+    transform: scale(1.03); 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%; 
+    }
+
+    .card-img {
+        height: 180px; /
+    }
+
+    .card-title {
+        font-size: 1.2em; 
+    }
+
+    .card-text {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-img {
+        height: 150px; 
+    }
+
+    .card-title {
+        font-size: 1.1em; 
+    }
+
+    .card-text {
+        font-size: 0.8em;
+    }
+}
+
+
+/*---*/
+
+#faq {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-checkbox {
+    display: none;
+}
+
+.faq-title {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: hsl(349, 41%, 57%);
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.faq-content {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.faq-checkbox:checked + .faq-title + .faq-content {
+    display: block;
+}
+
+
+.faq-content {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.faq-checkbox:checked + .faq-title + .faq-content {
+    max-height: 500px; 
+}
+
+footer {
+    background-color: #BF6576;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.footer-img {
+    max-height: 50px; 
+    width: auto;
+}
+
+.footer-text {
+    flex-grow: 1; 
+    text-align: center;
+    color: white;
+    font-family: var(--padrao);
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0; 
+}
+
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.socialContainer:hover {
+    transform: scale(1.1);
+}
+
+.containerOne:hover {
+    background-color: #d62976; /* Instagram */
+}
+
+.containerThree:hover {
+    background-color: #0072b1; /* LinkedIn */
+}
+
+.containerFour:hover {
+    background-color: #128c26; /* WhatsApp */
+}
+
+.socialSvg {
+    width: 20px;
+    height: 20px;
+}
+
+.socialSvg path {
+    fill: white;
+}
